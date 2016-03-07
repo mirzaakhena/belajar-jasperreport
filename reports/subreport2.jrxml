@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-03-07T22:01:50 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="5" uuid="686c9280-4eff-402c-ad55-1bdbbaaac00a">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<subDataset name="Dataset1" uuid="ca06597e-5e7b-49bf-bf68-83623dfced24">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="x" class="java.lang.Integer"/>
+		<field name="y" class="java.lang.Integer"/>
+		<field name="processName" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dataCharts" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="15">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="15" backcolor="#D4D4D4" uuid="d67bd724-158c-4bb5-80f7-614b6e92f8d8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="15" uuid="fbba35c0-66fe-4abc-aaf8-5affbdf0cbd0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[SECTION 3 : TREND]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="189" splitType="Stretch">
+			<xyLineChart>
+				<chart>
+					<reportElement x="0" y="5" width="555" height="174" uuid="3125df80-5e5f-47ab-b253-370c94532e48"/>
+					<box bottomPadding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<xyDataset>
+					<dataset>
+						<datasetRun subDataset="Dataset1" uuid="ab813988-675a-4540-95f7-7ccd2d91cb09">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{dataCharts})]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<xySeries autoSort="true">
+						<seriesExpression><![CDATA[$F{processName}]]></seriesExpression>
+						<xValueExpression><![CDATA[$F{x}]]></xValueExpression>
+						<yValueExpression><![CDATA[$F{y}]]></yValueExpression>
+					</xySeries>
+				</xyDataset>
+				<linePlot isShowShapes="false">
+					<plot/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</linePlot>
+			</xyLineChart>
+		</band>
+	</detail>
+</jasperReport>

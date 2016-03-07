@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-03-07T22:11:39 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="masterreport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="98f93a61-e74f-4606-b130-361ff1719e0e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dataTables" class="java.util.List"/>
+	<field name="listOfDataCharts" class="java.util.List"/>
+	<field name="batchName" class="java.lang.String"/>
+	<field name="batchNo" class="java.lang.String"/>
+	<field name="tank" class="java.lang.String"/>
+	<field name="quantity" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="operatorName" class="java.lang.String"/>
+	<field name="recipeName" class="java.lang.String"/>
+	<field name="totalDuration" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="20" uuid="b7da275e-16ec-4dfc-9d7a-d364c5cd1de6">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MANUFACTURING BATCH CARD]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="92">
+			<rectangle>
+				<reportElement x="0" y="19" width="555" height="69" uuid="abb831a1-a49a-4414-b573-4cfde528889f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="100" y="40" width="100" height="15" uuid="71d24cec-da06-4614-b752-a9fc1fa39080"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{batchName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="15" uuid="63642beb-e5df-4a2b-885c-1c51fd2dd17e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Batch Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="56" width="100" height="15" uuid="9e3b6138-33b6-41df-bae4-1cf07337618d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{batchNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="56" width="100" height="15" uuid="6be3b477-fd20-4b20-a9ef-d62409d21a57"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Batch No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="72" width="100" height="15" uuid="8b62097c-783a-4fba-a72c-403c2ef3034b"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tank}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="72" width="100" height="15" uuid="ea34d8ac-cc8b-4d84-9dce-2434942fe905"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tank Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="24" width="100" height="15" uuid="e8bb3c3d-5867-4e74-b699-d37071b7ae26"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="24" width="100" height="15" uuid="f9b02f65-30ce-4e2a-bf82-b4ca14e39edb"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="40" width="100" height="15" uuid="cf1d1bfa-199f-4677-8256-9d7c938e978f"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="40" width="100" height="15" uuid="7f8b3790-a33b-4516-8139-fe5c69300778"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="56" width="100" height="15" uuid="93de4ef0-6e5a-402b-a2df-03356cf91e0d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{operatorName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="56" width="100" height="15" uuid="44530557-91f7-4aea-9143-4cb4aab8c2c6"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Operator Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="24" width="100" height="15" uuid="c21af777-0695-4761-ae0f-cee5069c1b88"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{recipeName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="24" width="100" height="15" uuid="46a4e179-dcf8-4086-a13d-9d8d54d29823">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recipe Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="72" width="100" height="15" uuid="be6ebe8a-ab42-4ed0-b570-9edad6166520"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totalDuration}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="72" width="100" height="15" uuid="f16c3870-4938-4104-b7ab-322feb37ed21">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Duration]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="15" backcolor="#D4D4D4" uuid="5b681e4d-5fb4-4a70-9f44-7aafbb1ffb8e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="15" uuid="3cb32849-89f8-453b-b50b-95cc354a0cd6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[SECTION 1 : PRODUCT DESCRIPTION]]></text>
+			</staticText>
+		</band>
+		<band height="36">
+			<subreport>
+				<reportElement x="-20" y="0" width="595" height="33" uuid="35fcb3f1-67ff-42ce-bca1-9220432ba390"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{dataTables})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="150">
+			<subreport>
+				<reportElement x="-20" y="0" width="595" height="130" uuid="1e030680-cc87-4364-8707-d610c3414d62"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listOfDataCharts})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/subreport2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="15" uuid="5e7bd685-29ed-4cb7-a6e2-cbe37b31aea5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
